@@ -3,6 +3,9 @@
 * Node.js v16.15.0
 * npm v8.5.5
 * Accessable 3000 port (for running the solution of development problem 1)
+* MySQL version 8
+
+## Development
 
 ### Problem 1
 Solution directory: [development/problem_01/](development/problem_01/)
@@ -86,4 +89,47 @@ Length of the longest palindromic substring of "xyz" is: 1
     * Run the tests.
     ```
     npm run test
-    ```mbstring
+    ```
+
+
+## SQL
+
+<b>First create a MySQL database named `dictionary` with the following schema.</b>
+```
+create table words(id INT, base_form TEXT);
+
+create table definitions(id INT, word_id INT, def_text TEXT);
+
+create table translations(id INT, word_id INT, translated_form TEXT);
+```
+
+### Problem 1
+* Solution 1 file (using just a while statement): [sql/problem_01/solution_01.sql](sql/problem_01/solution_01.sql).
+    * To run the sql go to the following directory
+    ```
+    cd sql/problem_01
+    ```
+    * Run the `solution_01.sql` sql file. (Replace the placeholder with actual connection config.)
+    ```
+    mysql -uroot -h[MYSQL_HOST] -p[MYSQL_PASSWORD] --port=[MYSQL_PORT] --database=dictionary < "solution_01.sql"
+    ```
+* Solution 2 file (using prepared statement): [sql/problem_01/solution_02.sql](sql/problem_01/solution_02.sql).
+    * To run the sql go to the following directory
+    ```
+    cd sql/problem_01
+    ```
+    * Run the `solution_02.sql` sql file. (Replace the placeholder with actual connection config.)
+    ```
+    mysql -uroot -h[MYSQL_HOST] -p[MYSQL_PASSWORD] --port=[MYSQL_PORT] --database=dictionary < "solution_02.sql"
+    ```
+
+### Problem 2
+* Solution file: [sql/problem_02/solution.sql](sql/problem_02/solution.sql).
+    * To run the sql go to the following directory
+    ```
+    cd sql/problem_02
+    ```
+    * Run the `solution.sql` sql file. (Replace the placeholder with actual connection config.)
+    ```
+    mysql -uroot -h[MYSQL_HOST] -p[MYSQL_PASSWORD] --port=[MYSQL_PORT] --database=dictionary < "solution.sql"
+    ```
