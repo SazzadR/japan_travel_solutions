@@ -91,6 +91,25 @@ Length of the longest palindromic substring of "xyz" is: 1
     npm run test
     ```
 
+### Problem 4
+Solution file: [development/problem_04/app.php](development/problem_04/app.php)
+
+This is a partial solution of problem 4. Here we are just checking if the first string can be turned into second string.
+
+#### Steps to run the app
+* Go to `problem_04` directory.
+```
+cd development/problem_04
+```
+* Running the tests.
+    * Install the depedencies.
+    ```
+    composer install
+    ```
+    * Run the tests.
+    ```
+    ./vendor/bin/phpunit --testdox tests/TestSolution.php
+    ```
 
 ## SQL
 
